@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+.gridded {
+    background-color: transparent;
+    overflow: hidden;
+    position: relative;
+}
+
+.gridded::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(to right, #96969628 1px, transparent 1px),
+        linear-gradient(to bottom, #96969628 1px, transparent 1px);
+    background-size: 80px 80px;
+    z-index: 1;
+}
+
+.gridded::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(to right, #96969628 1px, transparent 1px),
+        linear-gradient(to bottom, #96969628 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: 2;
+}
+

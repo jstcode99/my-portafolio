@@ -1,5 +1,10 @@
+---
+import "../styles/global.css";
+import Navigator from '../components/navigation/Navigator.astro';
+
+---
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -7,8 +12,11 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
 	</head>
-	<body>
-		<slot />
+	<body class="dark:bg-black">
+		<Navigator />
+		<div class="container-fluid lg:px-40 px-10">
+			<slot />
+		</div>
 	</body>
 </html>
 
