@@ -1,30 +1,53 @@
 ---
 import "../styles/global.css";
-import Navigator from '../components/navigation/Navigator.astro';
+import BaseHead from '../components/seo/BaseHead.astro';
 
+export interface Props {
+  title?: string;
+  description?: string;
+  canonicalUrl?: string;
+}
+
+const { title, description, canonicalUrl } = Astro.props;
 ---
-<!doctype html>
-<html lang="en" class="dark">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body class="dark:bg-black">
-		<Navigator />
-		<div class="container-fluid lg:px-40 px-10">
-			<slot />
-		</div>
-	</body>
+
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Script para dark mode inmediato -->
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+
+    <!-- BaseHead con todas las meta tags SEO -->
+    <BaseHead 
+      title={title}
+      description={description}
+      canonicalUrl={canonicalUrl}
+    />
+  </head>
+  <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300 antialiased">
+    <slot />
+  </body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+<style is:global>
+  /* Estilos globales */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  * {
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  }
 </style>

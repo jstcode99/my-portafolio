@@ -1,10 +1,27 @@
 ---
-import Experience from '../components/Experience.astro';
-import Hero from '../components/Hero.astro';
-import Layout from '../layouts/Layout.astro';
+// src/pages/index.astro
+import Layout from '@layouts/Layout.astro';
+import Navigation from '@components/ui/Navigation.astro';
+import Hero from '@components/sections/Hero.astro';
+import Skills from '@components/sections/Skills.astro';
+import Projects from '@components/sections/Projects.astro';
+import Process from '@components/sections/Process.astro';
+import Integrations from '@components/sections/Integrations.astro';
+import Contact from '@components/sections/Contact.astro';
+import Footer from '@components/ui/Footer.astro';
 ---
 
-<Layout>
-	<Hero />
-	<Experience />
+<Layout 
+  title="Juan Sebastián Torres - Desarrollador de Software | Laravel & React"
+  description="Desarrollador de Software con 5+ años creando aplicaciones escalables. Especialista en Laravel, React y arquitecturas robustas. +30% eficiencia en proyectos."
+  canonicalUrl="https://jstorres.dev"
+>
+  <Navigation />
+  <Hero />
+  <Skills />
+  <Projects />
+  <Process />
+  <Integrations />
+  <Contact />
+  <Footer />
 </Layout>
