@@ -1,41 +1,106 @@
 @import "tailwindcss";
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-* {
-  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+option {
+	@apply dark:bg-gray-700 dark:text-white bg-white text-black
 }
 
 .gridded {
-  background-color: transparent;
-  overflow: hidden;
-  position: relative;
+	background-color: transparent;
+	overflow: hidden;
+	position: relative;
 }
 
 .gridded::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image:
-    linear-gradient(to right, #96969628 1px, transparent 1px),
-    linear-gradient(to bottom, #96969628 1px, transparent 1px);
-  background-size: 80px 80px;
-  z-index: 1;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image:
+		linear-gradient(to right, #96969628 1px, transparent 1px),
+		linear-gradient(to bottom, #96969628 1px, transparent 1px);
+	background-size: 80px 80px;
+	z-index: 1;
 }
 
 .gridded::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image:
-    linear-gradient(to right, #96969628 1px, transparent 1px),
-    linear-gradient(to bottom, #96969628 1px, transparent 1px);
-  background-size: 40px 40px;
-  z-index: 2;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image:
+		linear-gradient(to right, #96969628 1px, transparent 1px),
+		linear-gradient(to bottom, #96969628 1px, transparent 1px);
+	background-size: 40px 40px;
+	z-index: 2;
 }
+
+/* ===================== button ====================== */
+.button-polygon {
+	@apply text-wrap inline-block font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-center items-center justify-center max-w-46;
+	clip-path: polygon(7.68786px 20.1081px,
+			7.68786px 20.1081px,
+			8.16364px 18.1351px,
+			8.88914px 16.2804px,
+			9.8446px 14.5617px,
+			11.0103px 12.9969px,
+			12.3663px 11.6038px,
+			13.8931px 10.4002px,
+			15.5708px 9.4038px,
+			17.3796px 8.63251px,
+			19.2998px 8.10411px,
+			21.3116px 7.83638px,
+			132.489px 0.710935px,
+			132.489px 0.710935px,
+			134.441px 0.714334px,
+			136.343px 0.968456px,
+			138.174px 1.46024px,
+			139.914px 2.17663px,
+			141.544px 3.10456px,
+			143.044px 4.23098px,
+			144.393px 5.54282px,
+			145.572px 7.02703px,
+			146.562px 8.67054px,
+			147.341px 10.4603px,
+			159.738px 44.9529px,
+			159.738px 44.9529px,
+			160.432px 47.6413px,
+			160.613px 50.3152px,
+			160.314px 52.9198px,
+			159.569px 55.4005px,
+			158.412px 57.7025px,
+			156.877px 59.7713px,
+			154.996px 61.5521px,
+			152.804px 62.9903px,
+			150.334px 64.0311px,
+			147.621px 64.62px,
+			16.6807px 80.5984px,
+			16.6807px 80.5984px,
+			13.7927px 80.6726px,
+			11.051px 80.2112px,
+			8.50526px 79.2659px,
+			6.20477px 77.8885px,
+			4.19901px 76.131px,
+			2.53742px 74.045px,
+			1.26946px 71.6825px,
+			0.444554px 69.0952px,
+			0.11216px 66.335px,
+			0.321718px 63.4536px,
+			7.68786px 20.1081px);
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+.button-polygon:hover {
+	@apply scale-105
+}
+
+/* ===================== button ====================== */
