@@ -1,5 +1,5 @@
 {
-  "extends": "astro/tsconfigs/base",
+  "extends": "astro/tsconfigs/strict",
   "include": [
     ".astro/types.d.ts",
     "**/*"
@@ -9,6 +9,12 @@
   ],
   "compilerOptions": {
     "paths": {
+      "@assets/*": [
+        "./src/assets/*"
+      ],
+      "@styles/*": [
+        "./src/styles/*"
+      ],
       "@pages/*": [
         "./src/pages/*"
       ],
@@ -17,7 +23,19 @@
       ],
       "@layouts/*": [
         "./src/layouts/*"
-      ]
+      ],
+      "@config/*": [
+        "./src/config/*"
+      ],
+      "@types/*": [
+        "./src/types/*"
+      ],
+      "@schemas/*": [
+        "./src/schemas/*"
+      ],
+      "@services/*": [
+        "./src/services/*"
+      ],
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react"
