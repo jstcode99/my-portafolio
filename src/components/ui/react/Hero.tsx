@@ -67,6 +67,7 @@ const Hero: React.FC = () => {
               <div className="text-center">
                 <AnimatedCounter
                   className="text-3xl"
+                  prefix="+"
                   suffix="%"
                   duration={2}
                   play={true}
@@ -82,11 +83,11 @@ const Hero: React.FC = () => {
               <div className="text-center">
                 <AnimatedCounter
                   className="text-3xl"
-                  suffix="k"
+                  prefix=""
                   duration={2}
                   play={true}
                   from={1}
-                  to={111}
+                  to={15}
                 />
                 <div
                   className="text-sm text-gray-600 dark:text-gray-400 transition-colors"
