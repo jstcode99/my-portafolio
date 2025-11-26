@@ -1,14 +1,18 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
+    "$schema": "https://openapi.vercel.sh/vercel.json",
+    "headers": [
         {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
+            "source": "/(.*)",
+            "headers": [
+                {
+                    "key": "X-Content-Type-Options",
+                    "value": "nosniff"
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ],
+    "installCommand": "pnpm install",
+    "buildCommand": "pnpm run build",
+    "outputDirectory": "dist",
+    "framework": "astro"
 }
