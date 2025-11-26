@@ -2,29 +2,33 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import Slide from './Slide';
+import partner from '@assets/projects/partner.webp';
+import pl4n3t from '@assets/projects/pl4n3t.webp';
+import vetko from '@assets/projects/vetko.webp';
+
 
 const SwiperProjects: React.FC = () => {
   const slides = [
     {
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      title: "Bienvenido a Nuestra Plataforma",
-      description: "Descubre las mejores soluciones para tu negocio",
+      image: partner,
+      title: "Partner App",
+      description: "Una aplicación integral para potenciar y gestionar tu experiencia minorista. Realiza un seguimiento de tus KPIs, gestiona regalos e inventario, y mantente informado",
       btnText: "Ver mas..",
-      btnLink: "#"
+      btnLink: "https://play.google.com/store/apps/details?id=com.neubinarios.partner&hl=es_CO"
     },
     {
-      image: "https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2068&q=80",
-      title: "Innovación y Tecnología",
-      description: "Las herramientas más avanzadas a tu disposición",
+      image: pl4n3t,
+      title: "PL4N3T",
+      description: "Un ERP diseñado para empresas comprometidas con la sostenibilidad. Cuantifica, analiza y toma decisiones en tiempo real",
       btnText: "Ver mas..",
-      btnLink: "#"
+      btnLink: "https://www.pl4n3t.com/"
     },
     {
-      image: "https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2068&q=80",
-      title: "Únete a Nuestra Comunidad",
-      description: "Más de 10,000 usuarios satisfechos",
+      image: vetko,
+      title: "VETKO",
+      description: "plataforma tecnológica construida bajo una red colaborativa que se encargará de las necesidades de tus mascotas y sus familias",
       btnText: "Ver mas..",
-      btnLink: "#"
+      btnLink: "https://www.vetko.pet/"
     }
   ];
 
