@@ -18,7 +18,7 @@ const SkillsSection = () => {
       id: "backend",
       title: "Backend",
       description: "Desarrollo de servidores y APIs robustas",
-      technologies: ["Laravel", "PHP", "Node.js", "Python", "MySQL", "PostgreSQL", "Redis", "REST APIs"]
+      technologies: ["Laravel", "PHP", "Node.js", "Python", "MySQL", "PostgreSQL", "Redis", "REST APIs", 'MCP']
     },
     {
       id: "frontend",

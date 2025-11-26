@@ -15,6 +15,12 @@ const IntegrationsSection = () => {
 
     const integrations: Integration[] = [
         {
+            id: "ai",
+            title: "AI",
+            description: "Microservicios con MCP, Generacion de contenido con AI, Promting",
+            icon: "🧠",
+        },
+        {
             id: "payments",
             title: "Pagos en Línea",
             description: "Sistemas multi-pago con PayPal, Stripe, Mercado Pago, PSE",
@@ -37,6 +43,12 @@ const IntegrationsSection = () => {
             title: "Infraestructura",
             description: "Docker, CI/CD con GitHub Actions, Nginx, Jenkins, Dokku",
             icon: "🛠️",
+        },
+        {
+            id: "n8n",
+            title: "n8n",
+            description: "Automatization de procesos con n8n",
+            icon: "🦾",
         }
     ];
 
